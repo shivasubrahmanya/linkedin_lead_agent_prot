@@ -1,0 +1,11 @@
+pdfplumber>=0.11.0
+pandas>=2.2.1
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+tldextract>=5.1.2
+regex>=2023.12.25
+gspread>=6.1.0
+google-auth>=2.29.0
+google-api-python-client>=2.126.0
+schedule>=1.2.1
+spacy>=3.7.4

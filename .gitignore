@@ -1,0 +1,29 @@
+# Environments
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Leads and Data
+leads.csv
+data/input_pdfs/*
+!data/input_pdfs/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Logs
+*.log
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
