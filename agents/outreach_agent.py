@@ -17,8 +17,15 @@ class OutreachAgent:
         }
 
         if path == "email":
-            logger.info(f"Queueing email for {best_contact.get('email')}")
+            logger.info(f"Generating email for {best_contact.get('email')}")
+            name = profile.get("name", "there")
+            role = profile.get("role", "Professional")
+            company = profile.get("company", "your company")
+            
+            email_content = self.message_gen.create_outreach_email(name, role, company)
             result["email_queued"] = True
+            result["email_subject"] = email_content["subject"]
+            result["email_body"] = email_content["body"]
             
         elif path == "linkedin":
             name = profile.get("name", "there")

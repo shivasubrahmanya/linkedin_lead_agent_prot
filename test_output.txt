@@ -1,0 +1,136 @@
+﻿python : E
+At line:1 char:1
++ python c:\Users\shiva
+\Desktop\linekdin\linke
+din_outreach_agent\test
+s\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (E:String) [],   
+  RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+=======================
+=======================
+=======================
+=
+ERROR: test_process_ema
+il_queue (__main__.Test
+EmailOutreach.test_proc
+ess_email_queue)
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "C:\ProgramData\
+anaconda3\Lib\unittest\
+mock.py", line 1423, 
+in patched
+    with self.decoratio
+n_helper(patched,
+         ~~~~~~~~~~~~~~
+~~~~~~~~^^^^^^^^^
+                       
+         args,
+                       
+         ^^^^^
+                       
+         keywargs) as 
+(newargs, newkeywargs):
+                       
+         ^^^^^^^^^
+  File "C:\ProgramData\
+anaconda3\Lib\contextli
+b.py", line 141, in 
+__enter__
+    return 
+next(self.gen)
+  File "C:\ProgramData\
+anaconda3\Lib\unittest\
+mock.py", line 1405, 
+in decoration_helper
+    arg = exit_stack.en
+ter_context(patching)
+  File "C:\ProgramData\
+anaconda3\Lib\contextli
+b.py", line 530, in 
+enter_context
+    result = _enter(cm)
+  File "C:\ProgramData\
+anaconda3\Lib\unittest\
+mock.py", line 1481, 
+in __enter__
+    self.target = 
+self.getter()
+                  
+~~~~~~~~~~~^^
+  File "C:\ProgramData\
+anaconda3\Lib\pkgutil.p
+y", line 518, in 
+resolve_name
+    mod = importlib.imp
+ort_module(s)
+  File "C:\ProgramData\
+anaconda3\Lib\importlib
+\__init__.py", line 
+88, in import_module
+    return _bootstrap._
+gcd_import(name[level:]
+, package, level)
+           ~~~~~~~~~~~~
+~~~~~~~~~~^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+  File "<frozen importl
+ib._bootstrap>", line 
+1387, in _gcd_import
+  File "<frozen importl
+ib._bootstrap>", line 
+1360, in _find_and_load
+  File "<frozen importl
+ib._bootstrap>", line 
+1331, in 
+_find_and_load_unlocked
+  File "<frozen importl
+ib._bootstrap>", line 
+935, in _load_unlocked
+  File "<frozen importl
+ib._bootstrap_external>
+", line 1022, in 
+exec_module
+  File "<frozen importl
+ib._bootstrap_external>
+", line 1160, in 
+get_code
+  File "<frozen importl
+ib._bootstrap_external>
+", line 1090, in 
+source_to_code
+  File "<frozen importl
+ib._bootstrap>", line 
+488, in _call_with_fram
+es_removed
+  File "C:\Users\shiva\
+Desktop\linekdin\linked
+in_outreach_agent\ai\me
+ssage_generator.py", 
+line 30
+    return {
+           ^
+SyntaxError: '{' was 
+never closed
+
+-----------------------
+-----------------------
+-----------------------
+-
+Ran 1 test in 0.013s
+
+FAILED (errors=1)

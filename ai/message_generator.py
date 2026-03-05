@@ -7,6 +7,31 @@ class MessageGenerator:
     def __init__(self):
         self.client = OllamaClient()
 
+    def create_outreach_email(self, name: str, role: str, company: str) -> dict:
+        """Constructs a professional outreach email."""
+        prompt = (
+            f"Write a professional outreach email to {name}, who is a {role} at {company}. "
+            "The goal is to introduce a potential collaboration or partnership. "
+            "The email should have a clear, engaging subject line and a professional body. "
+            "Keep it concise and personalized. "
+            "Return the response in the format: \nSubject: [Subject]\n\nBody: [Body]\n"
+            "Do not include placeholders like [Your Name], just the content."
+        )
+        
+        response = self.client.generate(prompt)
+        
+        if response and "Subject:" in response and "Body:" in response:
+            parts = response.split("Body:", 1)
+            subject = parts[0].replace("Subject:", "").strip()
+            body = parts[1].strip()
+            return {"subject": subject, "body": body}
+        else:
+            logger.warning("Failed to generate custom email, using fallback.")
+            return {
+                "subject": f"Collaboration Opportunity - {company}",
+                "body": f"Hi {name},\n\nI hope this email finds you well. I came across your profile and was impressed by your work as {role} at {company}. I'm reaching out to discuss a potential collaboration that could be mutually beneficial. Would you be open to a brief chat next week?\n\nBest regards,"
+            }
+
     def create_linkedin_dm(self, name: str, role: str, company: str) -> str:
         """Constructs a prompt and generates a LinkedIn message."""
         prompt = (
